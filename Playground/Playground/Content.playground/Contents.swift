@@ -1,5 +1,7 @@
 import GeoJSON
 import PostgresKit
 
-
-/// write stuff here
+/// load geojson from resource file
+/// connect to postgres
+/// write data to postgres
+/// ask progress about intersections
