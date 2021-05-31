@@ -8,6 +8,17 @@ import PostgresKit
 /// [ ] write data to postgres
 /// [ ] ask progress about intersections
 
+
+let configuration = PostgresConfiguration(
+    hostname: "localhost",
+    username: "postgres",
+    password: "",
+    database: "locationtracking"
+)
+
+
+
+
 var rawDocuments = [GeoJSONDocument]()
 
 print("Reading GeoJSON from File in a very inefficient way")
