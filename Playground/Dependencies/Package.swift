@@ -30,8 +30,8 @@ let package = Package(
 package.dependencies = [
     .package(name: "GeoJSON", url: "https://github.com/kiliankoe/GeoJSON", from: "0.6.0"),
     .package(name: "postgres-kit", url: "https://github.com/vapor/postgres-kit", from: "2.3.0")
-
 ]
+
 package.targets = [
     .target(name: "Dependencies",
         dependencies: [
