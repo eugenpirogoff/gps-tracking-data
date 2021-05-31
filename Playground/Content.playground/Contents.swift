@@ -1,6 +1,7 @@
 import PlaygroundSupport
 import Foundation
 import GeoJSON
+import PostgresKit
 
 /// [x] load geojson from resource file
 /// [ ] connect to postgres
@@ -11,10 +12,12 @@ var rawDocuments = [GeoJSONDocument]()
 
 print("Reading GeoJSON from File in a very inefficient way")
 
-for value in 1...31 {
+//for value in 1...31 {
+for value in 1...2 {
     let resourceName = "raw-file-\(value.description)"
+    print(resourceName)
     guard let urlToDocument = Bundle.main.url(forResource: resourceName, withExtension: "geojson", subdirectory: "GeoJSON") else { break }
-
+    
     do {
         let dataOfDocument = try Data(contentsOf: urlToDocument)
         let geoJSONDocument = try JSONDecoder().decode(GeoJSONDocument.self, from: dataOfDocument)
