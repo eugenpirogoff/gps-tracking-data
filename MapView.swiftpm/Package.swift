@@ -37,12 +37,18 @@ let package = Package(
             ]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/vincentneo/CoreGPX.git", "0.9.0"..<"1.0.0")
+    ],
     targets: [
         .executableTarget(
             name: "AppModule",
+            dependencies: [
+                .product(name: "CoreGPX", package: "coregpx")
+            ],
             path: ".",
             resources: [
-              .process("Resources/")
+                .process("Resources")
             ]
         )
     ]
